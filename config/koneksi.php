@@ -16,12 +16,11 @@
 // 3. Jangan gunakan db_company_profile atau if0_42027793_XXX di hosting.
 // ============================================================
 
-define('DB_HOST', 'sql312.infinityfree.com');
-define('DB_PORT', '3306');
-define('DB_USER', 'if0_42027793');
-define('DB_PASS', 'yHAjaZEM4AYN');
-define('DB_NAME', 'if0_42027793_company_profile');
-define('DB_CHARSET', 'utf8mb4');
+define('DB_HOST', $_ENV['MYSQLHOST'] ?? '');
+define('DB_PORT', $_ENV['MYSQLPORT'] ?? '3306');
+define('DB_USER', $_ENV['MYSQLUSER'] ?? '');
+define('DB_PASS', $_ENV['MYSQLPASSWORD'] ?? '');
+define('DB_NAME', $_ENV['MYSQLDATABASE'] ?? '');
 
 // ============================================================
 // Koneksi PDO
